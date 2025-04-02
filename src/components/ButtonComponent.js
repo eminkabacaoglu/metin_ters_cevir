@@ -27,6 +27,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     padding: 5,
-    fontFamily: "Inter_900Black",
   },
 });
