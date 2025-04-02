@@ -16,6 +16,14 @@ describe("App", () => {
         const button = getByText("Metni Ters Çevir");
         fireEvent.press(button);
         expect(getByText("")).toBeTruthy();
+
+    });
+    it("özel karakterler doğru ters çevrilsin", () => {
+        const input = getByPlaceholderText("bir metin giriniz"); 
+        const {getByText} = render(<App/>);
+        const button = getByText("Metni Ters Çevir");
+        fireEvent.changeText(input,"12345!*&");
+        expect(getByText("&*!54321")).toBeTruthy();
         
     });
 });
